@@ -41,6 +41,7 @@ class HeyboxAppClient extends HttpClient {
       time: String(timeSec),
       imei: this.account.imei,
       heybox_id: this.account.heyboxId,
+      os_version: APP_PROFILE.os_version,
     });
     const response = await this.get({
       url: `${HKEY_API}?${query}`,
@@ -128,6 +129,7 @@ class HeyboxAppClient extends HttpClient {
         time: timeSec,
         imei: this.account.imei,
         heybox_id: this.account.heyboxId,
+        os_version: APP_PROFILE.os_version,
       }),
     });
     const rp = hkeyResponse.result?.result || {};
