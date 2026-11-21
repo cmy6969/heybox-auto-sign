@@ -2,9 +2,7 @@ name: 小黑盒每日签到
 
 on:
   schedule:
-    # UTC 时间：01:30 = 北京时间 09:30
-    # GitHub cron 可能延迟数分钟，且仓库 60 天无活动会自动停用定时任务
-    - cron: '7 30 * * *'
+  - cron: '30 7 * * *'
   workflow_dispatch: {}   # 允许在 Actions 页面手动触发
 
 permissions:
